@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="title">Contact</h1>
+<p>The best way to contact me is via e-mail.</p>
+<a href="mailto:furkanyilmaz@skiff.com">furkanyilmaz@skiff.com</a>
+<a onclick="myFunction()">📋</a>
+<p style="color: hsl(205deg, 16%, 77%)" id="clippy" onclick="myFunction()"></p></p>
+
+<script>
+  function myFunction() {
+    navigator.clipboard.writeText("furkanyilmaz@skiff.com");
+    document.getElementById("clippy").innerHTML = "Copied to clipboard. ✔️";
+  }
+</script>
+{% endblock content %}
