@@ -3,7 +3,7 @@ title = "Run systemd inside Podman "
 date = 2023-02-11
 +++
 
-If you use a Linux distrubiton that uses SELinux (eg. Fedora Linux) the first thing you have to do is to let it know that you are allowing to run systemd inside Podman.
+For Linux distributions that uses SELinux (eg. Fedora Linux) the first thing you have to do is to let SELinux know is that you are allowing to run systemd inside a Podman container.
 
 You have to change the `container_manage_cgroup` bool.
 
