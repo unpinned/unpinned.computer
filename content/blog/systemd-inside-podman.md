@@ -3,7 +3,7 @@ title = "Run systemd inside Podman "
 date = 2023-02-11
 +++
 
-==UPDATE: Apparently you don't have to change bools anymore! Its supported out of the box now! https://github.com/coreos/fedora-coreos-tracker/issues/397#issuecomment-1343214681==
+<mark>UPDATE: Apparently you don't have to change bools anymore! Its supported out of the box now! https://github.com/coreos/fedora-coreos-tracker/issues/397#issuecomment-1343214681</mark>
 
 ~~For Linux distributions that use SELinux (eg. Fedora Linux) the first thing you have to do is to let SELinux know that you are allowing to run systemd inside a Podman container.~~
 
