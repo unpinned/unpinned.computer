@@ -13,7 +13,7 @@ Then you have to build your Containerfile which installs and initalizes systemd.
 
 Most minimal example:
 
-```
+```dockerfile
 FROM fedora:37
 
 RUN dnf -y install systemd; dnf clean all
