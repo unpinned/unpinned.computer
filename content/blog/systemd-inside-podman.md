@@ -3,13 +3,13 @@ title = "Run systemd inside Podman "
 date = 2023-02-11
 +++
 
-<mark>UPDATE: Apparently you don't have to change bools anymore! Its supported out of the box now! https://github.com/coreos/fedora-coreos-tracker/issues/397#issuecomment-1343214681</mark>
+### UPDATE: Apparently you don't have to change bools anymore! Its supported out of the box now! [See this](https://github.com/coreos/fedora-coreos-tracker/issues/397#issuecomment-1343214681)
 
-~~For Linux distributions that use SELinux (eg. Fedora Linux) the first thing you have to do is to let SELinux know that you are allowing to run systemd inside a Podman container.~~
+<strike>For Linux distributions that use SELinux (eg. Fedora Linux) the first thing you have to do is to let SELinux know that you are allowing to run systemd inside a Podman container.</strike>
 
-~~You have to change the `container_manage_cgroup` bool.~~
+<strike>You have to change the `container_manage_cgroup` bool.</strike>
 
-~~To do this run `setsebool -P -N container_manage_cgroup 1`~~
+<strike>To do this run `setsebool -P -N container_manage_cgroup 1`</strike>
 
 Then you have to build your Containerfile which installs and initalizes systemd.
 
