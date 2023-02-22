@@ -7,9 +7,9 @@ date = 2023-02-11
 
 <strike>For Linux distributions that use SELinux (eg. Fedora Linux) the first thing you have to do is to let SELinux know that you are allowing to run systemd inside a Podman container.</strike>
 
-<strike>You have to change the `container_manage_cgroup` bool.</strike>
+<strike>You have to change the ` ̶c̶o̶n̶t̶a̶i̶n̶e̶r̶_̶m̶a̶n̶a̶g̶e̶_̶c̶g̶r̶o̶u̶p̶` bool.</strike>
 
-<strike>To do this run `setsebool -P -N container_manage_cgroup 1`</strike>
+<strike>To do this run ` ̶s̶e̶t̶s̶e̶b̶o̶o̶l̶ ̶-̶P̶ ̶-̶N̶ ̶c̶o̶n̶t̶a̶i̶n̶e̶r̶_̶m̶a̶n̶a̶g̶e̶_̶c̶g̶r̶o̶u̶p̶ ̶1̶`</strike>
 
 Then you have to build your Containerfile which installs and initalizes systemd.
 
