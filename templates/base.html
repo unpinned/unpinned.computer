@@ -1,92 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width">
-    <title>unpinned writings</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://em-content.zobj.net/thumbs/120/google/350/pushpin_1f4cc.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@picocss/pico@1.5.7/css/pico.min.css"
-    />
-    <style>
-      /* Green Light scheme (Default) */
-      /* Can be forced with data-theme="light" */
-      [data-theme="light"],
-      :root:not([data-theme="dark"]) {
-        --primary: #43a047;
-        --primary-hover: #388e3c;
-        --primary-focus: rgba(67, 160, 71, 0.125);
-        --primary-inverse: #fff;
-      }
 
-      /* Green Dark scheme (Auto) */
-      /* Automatically enabled if user has Dark mode enabled */
-      @media only screen and (prefers-color-scheme: dark) {
-        :root:not([data-theme]) {
-          --primary: #43a047;
-          --primary-hover: #4caf50;
-          --primary-focus: rgba(67, 160, 71, 0.25);
-          --primary-inverse: #fff;
-        }
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <title>unpinned writings</title>
+  <link rel="icon" type="image/png" href="https://em-content.zobj.net/thumbs/120/google/350/pushpin_1f4cc.png" />
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.5.7/css/pico.min.css" />
+  <link rel="stylesheet" href="magicy.css" />
 
-      /* Green Dark scheme (Forced) */
-      /* Enabled if forced with data-theme="dark" */
-      [data-theme="dark"] {
+  <style>
+    /* Green Light scheme (Default) */
+    /* Can be forced with data-theme="light" */
+    [data-theme="light"],
+    :root:not([data-theme="dark"]) {
+      --primary: #43a047;
+      --primary-hover: #388e3c;
+      --primary-focus: rgba(67, 160, 71, 0.125);
+      --primary-inverse: #fff;
+    }
+
+    /* Green Dark scheme (Auto) */
+    /* Automatically enabled if user has Dark mode enabled */
+    @media only screen and (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
         --primary: #43a047;
         --primary-hover: #4caf50;
         --primary-focus: rgba(67, 160, 71, 0.25);
         --primary-inverse: #fff;
       }
+    }
 
-      /* Green (Common styles) */
-      :root {
-        --form-element-active-border-color: var(--primary);
-        --form-element-focus-color: var(--primary-focus);
-        --switch-color: var(--primary-inverse);
-        --switch-checked-background-color: var(--primary);
-      }
+    /* Green Dark scheme (Forced) */
+    /* Enabled if forced with data-theme="dark" */
+    [data-theme="dark"] {
+      --primary: #43a047;
+      --primary-hover: #4caf50;
+      --primary-focus: rgba(67, 160, 71, 0.25);
+      --primary-inverse: #fff;
+    }
 
-      .uc_topimage {
-        border-radius: 50%;
-        margin: 10px 0px 0px 0px;
-      }
-      .title {
-        margin: 10px 0px 0px 0px;
-      }
-    </style>
-  </head>
+    /* Green (Common styles) */
+    :root {
+      --form-element-active-border-color: var(--primary);
+      --form-element-focus-color: var(--primary-focus);
+      --switch-color: var(--primary-inverse);
+      --switch-checked-background-color: var(--primary);
+    }
 
-  <body>
-    <section class="section">
-      <div class="container">
-        <nav>
-          <ul>
-            <a href="/">
-              <img
-                class="uc_topimage"
-                src="https://avatars.githubusercontent.com/u/123964038?v=4"
-                width="72"
-                height="72"
-              />
-              <li>
-                <strong>unpinned.computer</strong>
-              </li>
-            </a>
-          </ul>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog/">Posts</a></li>
-            <li><a href="/contact/" role="button">Contact</a></li>
-          </ul>
-        </nav>
-        {% block content %} {% endblock %}
-      </div>
-    </section>
-  </body>
+    .uc_topimage {
+      border-radius: 50%;
+      margin: 10px 0px 0px 0px;
+    }
+
+    .title {
+      margin: 10px 0px 0px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <nav>
+        <ul>
+          <a href="/">
+            <img class="uc_topimage" src="https://avatars.githubusercontent.com/u/123964038?v=4" width="72"
+              height="72" />
+            <li>
+              <strong>unpinned.computer</strong>
+            </li>
+          </a>
+        </ul>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Posts</a></li>
+          <li><a href="/contact/" role="button">Contact</a></li>
+        </ul>
+      </nav>
+      {% block content %} {% endblock %}
+    </div>
+  </section>
+</body>
+
 </html>
